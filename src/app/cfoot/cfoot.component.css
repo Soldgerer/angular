@@ -1,0 +1,10 @@
+.icons-hover{
+    color: white;
+    font-size: 1.3rem;
+}
+
+.icons-hover:hover {
+    color: red;
+
+    
+  }
