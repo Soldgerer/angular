@@ -15,4 +15,7 @@ export class AppComponent {
     return this.owo;
   }
 
+  sectionTitle:string = 'Loremaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdadwadsadwa';
+  private uwu:string = '';
+
 }

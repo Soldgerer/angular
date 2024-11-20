@@ -9,6 +9,9 @@ import { ChistoryComponent } from './chistory/chistory.component';
 import { CcoursesComponent } from './ccourses/ccourses.component';
 import { CteachersComponent } from './cteachers/cteachers.component';
 import { CstudentsComponent } from './cstudents/cstudents.component';
+import { PrincipalComponent } from './principal/principal.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { CstudentsComponent } from './cstudents/cstudents.component';
     ChistoryComponent,
     CcoursesComponent,
     CteachersComponent,
-    CstudentsComponent
+    CstudentsComponent,
+    PrincipalComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

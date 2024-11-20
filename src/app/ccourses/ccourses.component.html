@@ -1,1 +1,67 @@
-<p>ccourses works!</p>
+<div class="container container-fluid">
+    <h2>FORMULARIO DE INSCRIPCIÓN</h2>
+    <form>
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+          <div class="col">
+            <div data-mdb-input-init class="form-outline">
+                <label class="form-label" for="form6Example1">Nombres</label>
+              <input type="text" id="form6Example1" name="names" class="form-control" [(ngModel)]="names"/>
+             
+            </div>
+          </div>
+          <div class="col">
+            <div data-mdb-input-init class="form-outline">
+                <label class="form-label" for="form6Example2">Apellidos</label>
+              <input type="text" id="form6Example2" class="form-control" #LastName/>
+              
+            </div>
+          </div>
+        </div>
+      
+        <!-- Text input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" for="form6Example3">Edad</label>
+          <input type="text" id="form6Example3" class="form-control" #age />
+        
+        </div>
+      
+        <!-- Text input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" for="form6Example4">Dirección</label>
+          <input type="text" id="form6Example4" class="form-control" #address />
+          
+        </div>
+      
+        <!-- Email input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" for="form6Example5">Correo</label>
+          <input type="email" id="form6Example5" class="form-control" #email/>
+         
+        </div>
+      
+        <!-- Number input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-label" for="form6Example6">Telefono</label>
+          <input type="number" id="form6Example6" class="form-control" #phone/>
+         
+        </div>
+
+        <div data-mdb-input-init class="form-outline mb-4">
+            <label class="form-check-label" for="form6Example8"> Lista de cursos</label>
+            <select class="form-control" name="" id="" #course>
+                <option selected>
+                    Seleccionar un Cursowo
+                </option>
+                <option [value]="item" *ngFor="let item of getCourses()">{{item}}</option>
+            </select>
+          </div>
+      
+        <div data-mdb-input-init class="form-outline mb-4">
+          <label class="form-check-label" for="form6Example8"> {{getResponse()}} </label>
+        </div>
+      
+        <!-- Submit button -->
+        <button data-mdb-ripple-init type="button" class="btn btn-primary btn-block mb-4" (click)="getRegisterCoursePerson(names, LastName.value,age.value,address.value, email.value, phone.value, course.value)">Place order</button>
+      </form>
+</div>
