@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,5 +29,9 @@ export class UsersServiceService {
   public getUsers(endPoint:string):any{
 
     return this.http.get(this.URL_API + endPoint, this.options);
+  }
+
+  public createUser(endPoint:string, userData: any): Observable<any> {
+    return this.http.post(this.URL_API + endPoint, userData, this.options);
   }
 }
